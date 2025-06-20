@@ -6,3 +6,6 @@
 .card-project:hover div{
     display:block !important;
 }
+textarea{
+    min-height:8rem;
+}
