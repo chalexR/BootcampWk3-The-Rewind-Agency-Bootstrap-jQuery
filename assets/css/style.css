@@ -1,0 +1,8 @@
+.card-project div{
+    display:none;
+    z-index:100;
+}
+.w-15{width:15% !important;}
+.card-project:hover div{
+    display:block !important;
+}

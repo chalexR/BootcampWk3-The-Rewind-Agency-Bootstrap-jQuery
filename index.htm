@@ -6,7 +6,7 @@
     <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link href="./assets/css/style.css" type="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar navbar-expand-md">
@@ -33,27 +33,115 @@
         </div>
     </nav>
 
-    <header class="row container-fluid bg-primary-subtle m-0 py-4">
-        <div class="col-md-1"></div>
-        <div class="col-md-6">
-            <div class="row bg-primary p-2 rounded-4 m-0">
+    <main class="row container-fluid bg-primary-subtle m-0 py-4 gx-0">
+    <!-- Left Column -->
+        <section class="col-md-8 pe-5 ps-4 gy-5">
+        <!-- Header Image --> 
+            <div class="row bg-primary rounded-5 m-0 p-4 mt-0 mb-5">
                 <div class="p-0">
-                    <img class="rounded-3" src="./assets/image/rewind-agency-banner.jpg" width="100%"> 
+                    <img class="rounded-4" src="./assets/image/rewind-agency-banner.jpg" width="100%"> 
                 </div>         
             </div>
-            
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-3 bg-primary p-2 rounded-4">
-            <h3>Get in touch!</h3>
-            <form>
+        <!-- Tours --> 
+            <div class="row bg-primary rounded-5 m-0 p-4 my-5">
+                <h3>Our Most Recent Tours</h3>
+                <div class="row d-flex p-0 m-0">
+                    <div class="w-50 card-project">
+                        <img src="./assets/image/abraham-rave-king.jpg" alt="Abraham Lincoln on the Sesh" class="w-100 rounded-3">
+                        <div class="position-absolute card-desc">
+                            <h2>Abe Raves: The Emancipation Vibration</h2>
+                            <p>History books won’t tell you this — <strong></strong>but Abraham Lincoln would’ve absolutely lost it in a 90s illegal rave.</strong><br />
+                            Tall hat? Already PLUR-coded.<br />
+                            Beard? Peak warehouse chic.<br />
+                            Vibes? Impeccable.</p>
+                            <p>Join us on a once-in-a-timeline experience:<br />
+                            <i>“Four score and seven bangers ago…”</i></p>
+                            <ul class="ul-ticklist">
+                                You'll:
+                                <li>Two-step in the Gettysburg glow-up</li>
+                                <li>Watch Abe light up the dancefloor with glowsticks in both hands</li>
+                                <li>Experience a laser show powerful enough to free a divided nation</li>
+                            </ul>
+                            <p>RIP to the Rave King.<br />
+                            He came for unity. He left covered in UV body paint and love.</p>
+                        </div>
+                    </div>
+                    <div class="w-50 card-project">
+                        <img src="./assets/image/musk-whisperer.jpg" alt="Whispering in Elon's Ear" class="w-100 rounded-3">
+                        <div class="position-absolute card-desc">
+                            <h2>The Whisper Heard Through Time</h2>
+                            <p>Look, I only went back to whisper one thing in Elon’s ear:</p>
+                            <blockquote>The big bill’s ugly, bro. Taper the edges. Make it fly.</blockquote>
+                            <p>Next thing I know, he’s tweeting wild and tanking stock prices, accidentally leaking Trump’s Epstein Island itinerary like it was a brunch invite.</p>
+                            <p>I didn’t mean to cause an interdimensional scandal — I was just there to change font choices on the Mars UI.</p>
+                        </div>
+                    </div>
+                    <div class="w-50 card-project">
+                        <img src="./assets/image/grassy-knole.jpg" alt="The Grassy Knole - JFK" class="w-100 rounded-3">
+                        <div class="position-absolute card-desc">
+                            <h2>“Back… and to the left.”</h2>
+                            <p>Ever wanted to see history unfold from an inconveniently grassy incline?</p>
+                            <p>Join The Rewind Agency on our most requested tour:<br />
+                            💼 “The Grassy Knoll: JFK’s Final Parade & Conspiracy Picnic”</p>
+                            <p>Bring binoculars, a questionable alibi, and your best 60s shades — we’ll handle the ethics waiver.</p>
+                            <ul class="ul-ticklist">
+                                Includes:
+                                <li>Front-row spot near That Fence™</li>
+                                <li>Complimentary tinfoil hat</li>
+                                <li>Awkward eye contact with 3 men in identical beige coats</li>
+                            </ul>
+                            <p><i>Please refrain from altering the timeline. We’ve already lost 2 interns to The Zapruder Incident.</i></p>
+                        </div>
+                    </div>
+                    <div class="w-50 card-project">
+                        <img src="./assets/image/guy-fawkes-baseline.jpg" alt="Getting Down with Guy Fawkes" class="w-100 rounded-3">
+                        <div class="position-absolute card-desc">
+                            <h2>Guy Fawkes: Gunpowder, Basslines & Respect</h2>
+                            <p>You know him for the plot — but Guy ‘The G’ Fawkes was all about dropping heat, not just planting it.</p>
+                            <p>Step through time and join him the night before it all went boom:<br />
+                            <strong>One vault. One MiniRig. Pure UK Garage.</strong></p>
+                            <ul class="ul-ticklist">
+                                Expect:
+                                <li>Gunpowder barrels and bass barrels</li>
+                                <li>Fawkes skanking so hard he almost forgot the plan</li>
+                                <li>Reloads so filthy the monarchy felt it in their chest</li>
+                            </ul>
+                            <p>“Remember, remember… that absolute face melter he played in the tunnels.”</p>
+                            <p>Peace. Love. Anarchy. 140bpm.<br />
+                            He didn’t just light the fuse — he was the fuse.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <h3>CALL TO ACTION</h3>
+                </div>
+            </div>
+        <!-- About Us -->
+            <div class="row bg-primary rounded-5 m-0 p-4 d-flex flex-nowrap my-5">
+                <div class="">
+                    <h3>Welcome to The Rewind Agency</h3>
+                    <p><strong>What if history had better music?</strong></p>
+                    <p>That was the question our founder, Charles Richer, asked just moments before accidentally starting a garage night in Ancient Rome.</p>
+                    <p>Now, The Rewind Agency offers bespoke, high-energy time-travel tours to the most iconic — and most underrated — parties in the timeline. From junglist riots on the grassy knoll to backroom techno at the Boston Tea Party, we help you experience history the way it should’ve been: loud, glowing, and slightly out of sync.</p>
+                    <p>We operate across multiple dimensions with the help of a highly trained (and occasionally glitchy) team of interdimensional beings, each with a knack for hospitality, timeline stability, and getting a crowd moving in any century.</p>
+                    <p>Time travel is real. The vibes are unreal.</p>
+                    <p>Book your place in history — and bring your own whistle.</p>
+                </div>
+            </div>
+
+        </section>
+    <!-- Right Column -->
+        <section class="col-md-4 p-0 pe-4 gy-5 pt-3">
+        <!-- Contact Form -->
+            <form class="col-md-12 bg-primary rounded-4 p-2 my-5">
+                <h3>Get in touch!</h3>
                 <label for="name">Name: </label><br />
                 <input id="name" name="name" type="text"><br />
                 <label for="email">Email: </label><br />
                 <input id="email" name="email" type="email"><br />
                 <label for="phone">Phone: </label><br />
                 <input id="phone" name="phone" type="tel"><br /><br />
-                <label for="date">Do you have a particular date in mind?</label>
+                <label for="date">Do you have a particular date in mind?</label><br />
                 <!-- TODO: jQuery version -->
                 <input type="date" id="date" name="date" class="form-item"><br /><br />
                 Which of our services would you like to enquire about?
@@ -74,21 +162,157 @@
                     <label class="form-check-label" for="reportAnom">Report a Temporal Anomaly</label>
                 </div>
             </form>
-        </div>
-        <div class="col-md-1"></div>
-    </header>
-
-    <main class="row container-fluid bg-secondary-subtle m-0">
-
-        <section class="row">
-
-
+        <!-- Testimonial -->
+            <div class="col-md-12 bg-primary rounded-4 p-2 my-5">
+                <h4>Testimonial(s)</h4>
+            </div>
+        <!-- Social -->
+            <div class="col-md-12 bg-primary rounded-4 p-2 vh-100 overflow-y-scroll my-5">
+                <header id="position-relative">
+                    <img src="./assets/image/myspacetime-logo.svg" alt="MySpacetime Logo" class="w-15 m-0">
+                    <h3 class="w-50 d-inline align-middle">MySpacetime</h3>
+                </header>
+                <main class="social b-0">
+                    <div class="social-post">
+                        <div class="social-handle">
+                            @therewindagency
+                        </div>
+                        <div class="social-content">
+                            <p>Just dropped a Victorian rave set so heavy Queen Victoria said “We are not amused” then rewound the track herself.🕰️💃🔥<br />
+                            #TemporalTechno #RewindRave #PLURsince1840</p>
+                        </div>
+                    </div>
+                    <div class="social-post">
+                        <div class="social-handle">
+                            @therewindagency
+                        </div>
+                        <div class="social-content">
+                            <p>Guy Fawkes just asked if he can headline Boomtown next year.<br />  
+                            Said he’s bringing barrels.<br />
+                            We’re… concerned.<br />
+                            🎧💣🇬🇧<br />
+                            #UKGThroughTime #ExplosiveSets</p>
+                        </div>
+                    </div>
+                    <div class="social-post">
+                        <div class="social-handle">
+                            @therewindagency
+                        </div>
+                        <div class="social-content">
+                            <p>Abraham Lincoln just taught a whole dance tent about peace, love, unity, and respect.<br />
+                            Then hit a windmill kick that tore a hole in the fabric of time.<br />
+                            🎩🕺💥<br />
+                            #RaveKing #AbeOnTheDecks</p>
+                        </div>
+                    </div>
+                    <div class="social-post">
+                        <div class="social-handle">
+                            @therewindagency
+                        </div>
+                        <div class="social-content">
+                            <p>We time-ported into the Renaissance for a quiet picnic.<br />
+                            Leonardo da Vinci is now selling NFTs of the Mona Lisa doing gunfingers.<br />
+                            We may have broken art history.<br />
+                            🎨🌀📲<br />
+                            #ChronoChaos #DaVincheeky</p>
+                        </div>
+                    </div>
+                    <div class="social-post">
+                        <div class="social-handle">
+                            @therewindagency
+                        </div>
+                        <div class="social-content">
+                            <p>Took Cleopatra to a garage night. She invented mascara that changes colour with BPM.<br />
+                            MAC is in talks. So are NASA.<br />
+                            👁️💄🔊<br />
+                            #TimeTravelGlowUp #Cleobangers</p>
+                        </div>
+                    </div>
+                    <div class="social-post">
+                        <div class="social-handle">
+                            @therewindagency
+                        </div>
+                        <div class="social-content">
+                            <p>Freud’s been in the chill-out tent for 3 hours trying to psychoanalyse a subwoofer.<br />
+                            We are NOT going back for him.<br />
+                            🛋️🔊🌀<br />
+                            #FreudianBassline #TemporalBoundaries</p>
+                        </div>
+                    </div>
+                </main>
+            </div>
 
         </section>
-
     </main>
+
+    <footer class="row gx-1 pt-3">
+        <div class="col-md-3">
+            <p>© 2025 The Rewind Agency™<br />
+            All timelines reserved. No refunds for paradox-related trauma.<br />
+            Powered by bass. Stabilised by snacks. 
+            </p> 
+        </div>
+        <div class="col-md-1">
+            <uL class="m-0 p-0">
+                <li>
+                    <a href="./index.htm">Home</a>
+                </li>
+                <li>
+                    <a href="./service.htm">Projects</a>
+                </li>
+                <li>
+                    <a href="./about.htm">About Us</a>
+                </li>
+                <li>
+                    <a href="./contact.htm">Contact</a>
+                </li>
+                <li>
+                    <a href="./login.htm">Customer Login</a>
+                </li>
+            </uL>
+        </div>
+        <div class="col-md-4">
+            <h5>Accreditations:</h5>
+            <p>🧪 Rick Sanchez Certificate of Temporal Excellence – “He hasn’t died yet. That’s gotta count for something.”</p>
+            <p>📜 Official Member of the United Federation of When</p>
+            <p>🎩 Endorsed by the Society for Ethical Time Meddling (SETM) – “Because we asked nicely this time.”</p>
+            <p>🍕 Voted Best Historical Reenactment Pizza by the 3024 ChronoFoodie Awards</p>
+            <p>🐦 Timehawk™ Certified – For maintaining sustainable butterfly effects across timelines</p>
+        </div>
+        <div class="col-md-4">
+            <h5>Useful Links Across Time & Space</h5>
+            <ul>
+                <li>📜 Terms & Conditions of Temporal Travel</li>
+                <li>🕵️ Privacy Policy (Multiversal Edition)</li>
+                <li>⌛ Causality Waiver & Paradox Insurance</li>
+                <li>🧭 Lost & Found (Including Lost Time)</li>
+                <li>🕰️ ChronoTour User Manual v42.3.1 B.C.</li>
+                <li>📅 Book a Trip (Past, Present, or Hypothetical)</li>
+                <li>🦋 Butterfly Effect Mitigation Protocols</li>
+                <li>🧠 FAQ (Frequently Altered Questions)</li>
+                <li>🛠️ Temporal Support Hub – Glitch? Ghost? Grandfather?</li>
+                <li>🪐 Join the Loyalty Program: The Timelooper’s Club™</li>
+            </ul>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+    $('.card-project').hover(
+        function () {
+            var $cardDesc = $('.card-desc');
+
+            $(document).on("mousemove", function(evt) {
+                $cardDesc.css({left: evt.pageX, top: evt.pageY});
+            });
+        },
+        function () {
+            var $cardDesc = $('.card-desc');
+            $cardDesc.css({left: '0', top: '0'});
+        }
+    );
+    </script>
 </body>
 </html>
