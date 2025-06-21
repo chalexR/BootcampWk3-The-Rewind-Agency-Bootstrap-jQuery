@@ -25,6 +25,9 @@
     --int-shadow-card:
         2px 5px 5px var(--shadow-dark) inset,
         -2px -5px 5px var(--shadow-light) inset;
+    --int-shadow-button:
+        2px 4px 3px var(--shadow-dark) inset,
+        -2px -4px 3px var(--shadow-light) inset;
     --box-border: 1px solid var(--accent-four);
 }
 /* ---------------------------------
@@ -100,6 +103,29 @@ textarea:focus{
     color: #000000;
     border-radius: calc(1rem * 1);
 }
+.btn-primary{
+    background-color:var(--bg-main);
+    box-shadow: var(--box-shadow-button);
+    border:1px solid var(--accent-four);
+    color:var(--text-primary);
+    border-radius: 1rem;
+    transition: ease .4s;
+}
+.btn-primary:hover{
+    background-color:var(--accent-four);
+    box-shadow: var(--int-shadow-button);
+    color: var(--text-primary);
+    border:1px solid var(--accent-four);
+    transition: ease .2s;
+    transform: translateY(3px);
+}
+.btn-primary:active{
+    background-color:var(--accent-four) !important;
+    border:1px solid var(--accent-four) !important;
+    color: var(--accent-primary) !important;
+    transition: ease 0s;
+    transform: translateY(5px);
+}
 
 /* ---------------------------------
 
@@ -108,28 +134,33 @@ textarea:focus{
 .card-project{
     box-shadow: var(--int-shadow-card);
     box-sizing: border-box;
-    transition: ease .4s;
+    transition: transform .4s ease;
+}
+.card-project:hover .card-desc{
+    opacity: 1 !important;
+    visibility: visible;
+    pointer-events: auto;
 }
 .card-project:hover{
     box-shadow: var(--box-shadow-card);
     background-color:var(--accent-four);
-    transform:translateY(-3px);
-    transition: ease .2s;
-    z-index:5;
-}
-.card-project:hover div{
-    display:block !important;
+    /*transform:translateY(-3px);*/
+    z-index:2;
 }
 .card-desc{
-    display:none;
-    z-index:100;
-    font-weight:600;
-    border:2px solid rgba(231,236,241,0.3);
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    z-index: 100;
+
+    font-weight: 600;
+    border: 2px solid rgba(231,236,241,0.3);
     backdrop-filter: blur(8px);
-    background-color:rgba(226,230,234,0.45);
+    background-color: rgba(226,230,234,0.45);
     color: #000000;
 }
-
 @media screen and (max-width: 768px) {
 /* ---------------------------------
 0.1 General Styles */

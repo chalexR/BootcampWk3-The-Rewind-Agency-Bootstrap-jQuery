@@ -63,7 +63,7 @@
 
             <!-- NavBar Links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <a href="./"><button class="btn btn-primary mx-1" type="button">Home</button></a>
+                <a href="./index.htm"><button class="btn btn-primary mx-1" type="button">Home</button></a>
                 <a href="./service.htm"><button class="btn btn-primary mx-1" type="button">Services</button></a>
                 <a href="./about.htm"><button class="btn btn-primary mx-1" type="button">About Us</button></a>
                 <a href="./contact.htm"><button class="btn btn-primary mx-1" type="button">Contact</button></a>
@@ -375,15 +375,26 @@
     <script>
         $('.card-project').hover(
             function () {
-                var $cardDesc = $('.card-desc');
+                const $cardDesc = $(this).find('.card-desc');
 
-                $(document).on("mousemove", function(evt) {
+                // Save the handler reference so we can remove it later
+                const moveHandler = function(evt) {
                     $cardDesc.css({left: evt.pageX, top: evt.pageY});
-                });
+                };
+
+                // Store the handler on the element for cleanup
+                $(this).data('moveHandler', moveHandler);
+
+                $(document).on('mousemove', moveHandler);
             },
             function () {
-                var $cardDesc = $('.card-desc');
-                $cardDesc.css({left: '0', top: '0'});
+                const moveHandler = $(this).data('moveHandler');
+                if (moveHandler) {
+                    $(document).off('mousemove', moveHandler);
+                }
+
+                // Optionally reset position
+                $(this).find('.card-desc').css({left: 0, top: 0});
             }
         );
     </script>
