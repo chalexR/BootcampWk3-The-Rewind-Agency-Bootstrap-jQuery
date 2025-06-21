@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script>
@@ -73,7 +74,7 @@
     </nav>
 
 <!-- Main Section -->
-    <main class="row container-fluid bg-primary-subtle m-0 ps-4 gx-0 m-p-0">
+    <main class="row container-fluid m-0 ps-4 gx-0 m-p-0">
     <!-- Left Column -->
         <section class="col-md-8 pe-5 ps-5 gy-5 gx-5 m-p-0">
         <!-- Header Image --> 
@@ -86,7 +87,7 @@
             <div class="row bg-primary rounded-5 m-0 p-4 my-5 mx-1">
                 <h3>Our Most Recent Tours</h3>
                 <div class="row d-flex p-0 m-0">
-                    <div class="w-50 card-project p-4">
+                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/abraham-rave-king.jpg" alt="Abraham Lincoln on the Sesh" class="w-100 rounded-3">
                         <div class="position-absolute card-desc rounded-5 p-3">
                             <h2>Abe Raves: The Emancipation Vibration</h2>
@@ -106,7 +107,7 @@
                             He came for unity. He left covered in UV body paint and love.</p>
                         </div>
                     </div>
-                    <div class="w-50 card-project p-4">
+                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/musk-whisperer.jpg" alt="Whispering in Elon's Ear" class="w-100 rounded-3">
                         <div class="position-absolute card-desc rounded-5 p-3">
                             <h2>The Whisper Heard Through Time</h2>
@@ -116,7 +117,7 @@
                             <p>I didn’t mean to cause an interdimensional scandal — I was just there to change font choices on the Mars UI.</p>
                         </div>
                     </div>
-                    <div class="w-50 card-project p-4">
+                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/grassy-knole.jpg" alt="The Grassy Knole - JFK" class="w-100 rounded-3">
                         <div class="position-absolute card-desc rounded-5 p-3">
                             <h2>“Back… and to the left.”</h2>
@@ -133,7 +134,7 @@
                             <p><i>Please refrain from altering the timeline. We’ve already lost 2 interns to The Zapruder Incident.</i></p>
                         </div>
                     </div>
-                    <div class="w-50 card-project p-4">
+                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/guy-fawkes-baseline.jpg" alt="Getting Down with Guy Fawkes" class="w-100 rounded-3">
                         <div class="position-absolute card-desc rounded-5 p-3">
                             <h2>Guy Fawkes: Gunpowder, Basslines & Respect</h2>
@@ -179,18 +180,17 @@
             <form class="col-md-12 bg-primary rounded-4 p-2 my-5 mx-1 text-center">
                 <h3>Get in touch!</h3>
                 <label for="name">Name: </label><br />
-                <input id="name" name="name" type="text"><br />
+                <input id="name" name="name" type="text" class="rounded-4"><br />
                 <label for="email">Email: </label><br />
-                <input id="email" name="email" type="email"><br />
+                <input id="email" name="email" type="email" class="rounded-4"><br />
                 <label for="phone">Phone: </label><br />
-                <input id="phone" name="phone" type="tel"><br /><br />
+                <input id="phone" name="phone" type="tel" class="rounded-4"><br /><br />
                 <label for="date">Do you have a particular date in mind?</label><br />
-                <!-- TODO: jQuery version -->
 
                 <label for="from">From</label><br />
-                <input type="text" id="from" name="from"><br />
+                <input type="text" id="from" name="from" class="rounded-4"><br />
                 <label for="to">to</label><br />
-                <input type="text" id="to" name="to"><br /><br />
+                <input type="text" id="to" name="to" class="rounded-4"><br /><br />
 
                 Which of our services would you like to enquire about?
                 <div class="w-75 mx-5 text-start">
@@ -213,7 +213,7 @@
                 </div><br />
 
                 <label for="message">Message:</label><br />
-                <textarea id="message" name="message" class="w-75"></textarea><br /><br />
+                <textarea id="message" name="message" class="w-75 rounded-4 p-2"></textarea><br /><br />
 
                 <button class="btn btn-primary" type="submit">Send It</button>
             </form>
@@ -322,7 +322,7 @@
     </main>
 
 <!-- Footer Bar -->
-    <footer class="row gx-1 pt-3">
+    <footer class="row gx-1 pt-3 bg-primary rounded-top-5 mx-1 px-1">
         <div class="col-md-3">
             <p>© 2025 The Rewind Agency™<br />
             All timelines reserved. No refunds for paradox-related trauma.<br />
