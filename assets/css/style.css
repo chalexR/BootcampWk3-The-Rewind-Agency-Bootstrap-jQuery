@@ -1,4 +1,4 @@
-.card-project div{
+.card-desc{
     display:none;
     z-index:100;
 }
@@ -6,6 +6,27 @@
 .card-project:hover div{
     display:block !important;
 }
+.card-desc{
+    z-index:100;
+    font-weight:600;
+    border:2px solid rgba(231,236,241,0.3);
+    backdrop-filter: blur(8px);
+    background-color:rgba(226,230,234,0.45);
+}
 textarea{
     min-height:8rem;
+}
+
+@media screen and (max-width: 768px) {
+    /* Mobile Margin Classes */
+    .m-m-0{
+        margin: 0 !important;
+    }
+    .m-mx-1{
+        margin: map-get($spacers * 1);
+    }
+    /* Mobile Pagging Classes */
+    .m-p-0{
+        padding: 0 !important;
+    }
 }
