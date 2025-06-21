@@ -45,6 +45,10 @@ h1,h2,h3,h4,h5{
     font-family: var(--font-header);
     color: var(--text-primary);
 }
+footer{
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
 /* ---------------------------------
 0.2 Custom Bootstrap */
 .bg-primary{
@@ -151,7 +155,7 @@ h1,h2,h3,h4,h5{
     backdrop-filter: blur(8px);
     background-color: rgba(226,230,234,0.45);
     color: #000000;
-    transition: top 0.2s linear, left 0.2s linear;
+    transition: top 0.3s linear, left 0.3s linear;
 }
 /* ---------------------------------
 
