@@ -28,6 +28,9 @@
     --int-shadow-button:
         2px 4px 3px var(--shadow-dark) inset,
         -2px -4px 3px var(--shadow-light) inset;
+    --btn-shadow-button:
+        4px 7px 1px var(--shadow-dark) inset,
+        -4px -5px 2px var(--shadow-light) inset;
     --box-border: 1px solid var(--accent-four);
 }
 /* ---------------------------------
@@ -42,53 +45,41 @@ h1,h2,h3,h4,h5{
     font-family: var(--font-header);
     color: var(--text-primary);
 }
+/* ---------------------------------
+0.2 Custom Bootstrap */
 .bg-primary{
     background-color: var(--bg-main) !important;
     box-shadow: var(--box-shadow-card);
     border: var(--box-border);
 }
 .bg-primary-subtle{background-color: var(--bg-main) !important;}
+
 .navbar{z-index:100;}
+
 .w-15{ width:15% !important; }
-input{
+
+/* apply to any content you want to have a pop up effect on. There is a seperate class for buttons which overwrites the bootstrap*/
+.focus-element{
     background-color:var(--bg-main);
     box-shadow: var(--int-shadow-card);
     color:var(--text-secondary);
-    font-family:var(--font-body);
     outline: none;
     border: 1px inset var(--shadow-light);
-    border-bottom: 1px inset var(--shadow-light);
-    border-right: 1px inset var(--shadow-light);
-    border-top: 1px inset var(--box-border);
-    border-left: 1px inset var(--box-border);
     transition: ease .4s;
+    z-index:2;
 }
-input:focus{
+.focus-element:focus{
     box-shadow: var(--box-shadow-button);
     background-color:var(--accent-four);
     transform:translateY(-2px);
     transition: ease .2s;
-    z-index:5;
 }
-textarea{
-    min-height:8rem;
-    background-color:var(--bg-main);
-    color:var(--text-secondary);
-    font-family:var(--font-body);
-    box-shadow: var(--int-shadow-card);
-    outline: none;
-    border-bottom: 1px inset var(--shadow-light);
-    border-right: 1px inset var(--shadow-light);
-    border-top: 1px inset var(--box-border);
-    border-left: 1px inset var(--box-border);
-    transition: ease .4s;
-}
-textarea:focus{
-    box-shadow: var(--box-shadow-button);
-    background-color:var(--accent-four);
-    transform:translateY(-3px);
-    transition: ease .2s;
-    z-index:5;
+.focus-element:active{
+    background-color:var(--accent-four) !important;
+    border:1px solid var(--accent-four) !important;
+    color: var(--accent-primary) !important;
+    transition: ease 0s;
+    transform: translateY(4px);
 }
 .ui-widget-content{
     border:2px solid rgba(231,236,241,0.3) !important;
@@ -122,11 +113,11 @@ textarea:focus{
 .btn-primary:active{
     background-color:var(--accent-four) !important;
     border:1px solid var(--accent-four) !important;
+    box-shadow: var(--btn-shadow-button) !important;
     color: var(--accent-primary) !important;
     transition: ease 0s;
     transform: translateY(5px);
 }
-
 /* ---------------------------------
 
 /* ---------------------------------
@@ -160,7 +151,56 @@ textarea:focus{
     backdrop-filter: blur(8px);
     background-color: rgba(226,230,234,0.45);
     color: #000000;
+    transition: top 0.2s linear, left 0.2s linear;
 }
+/* ---------------------------------
+
+/* ---------------------------------
+2.0 Social Box Styles */
+.social-handle{
+    color:var(--text-primary);
+    font-weight:600;
+}
+.social-content{
+    border-bottom: 1px solid var(--text-primary);
+}
+.social-content p{
+    margin:0;
+}
+/* ---------------------------------
+
+/* ---------------------------------
+3.0 Form Styles */
+input, textarea{
+    font-family:var(--font-body);
+    border-bottom: 1px inset var(--shadow-light) !important;
+    border-right: 1px inset var(--shadow-light) !important;
+    border-top: 1px inset var(--box-border) !important;
+    border-left: 1px inset var(--box-border) !important;
+}
+textarea{
+    min-height:8rem;
+}
+.form-check-input{
+    background-color: var(--bg-main);
+    border:var(--box-border);
+    box-shadow: var(--int-shadow-button)
+}
+.form-check-input:focus{
+    outline: none;
+    background-color: var(--accent-four);
+    border:var(--box-border);
+    box-shadow:var(--box-shadow-button);
+    transform: translatey(-3px);
+}
+.form-check-input:checked{
+    border:1px solid var(--accent-primary);
+    background-color: var(--accent-primary);
+}
+/* ---------------------------------
+
+/* ---------------------------------
+4.0 N/A */
 @media screen and (max-width: 768px) {
 /* ---------------------------------
 0.1 General Styles */
