@@ -85,7 +85,7 @@ footer{
 }
 .bg-primary-subtle{background-color: var(--bg-main) !important;}
 
-.navbar{z-index:100;}
+.navbar{z-index:110;}
 
 .w-15{ width:15% !important; }
 
@@ -137,6 +137,9 @@ footer{
     transition: ease 0s;
     transform: translateY(4px);
 }
+.focus-element:active h1,.focus-element:active h2,.focus-element:active h3,.focus-element:active h4,.focus-element:active h5{
+    color: var(--accent-primary) !important;
+}
 .ui-widget-content{
     border:2px solid rgba(231,236,241,0.3) !important;
     backdrop-filter: blur(8px);
@@ -173,6 +176,9 @@ footer{
     color: var(--accent-primary) !important;
     transition: ease 0s;
     transform: translateY(5px);
+}
+.btn-primary:active h1,.btn-primary:active h2,.btn-primary:active h3,.btn-primary:active h4,.btn-primary:active h5{
+    color: var(--accent-primary) !important;
 }
 /* ---------------------------------
 
@@ -264,11 +270,29 @@ textarea{
     .m-m-0{
         margin: 0 !important;
     }
+    .m-mt-0{
+        margin-top:0 !important;
+    }
+    .m-ms-0{
+        margin-left: 0 !important;
+    }
     /* Mobile Padding Classes */
     .m-p-0{
         padding: 0 !important;
     }
     .m-p-1{
         padding: calc(1rem * .25) !important;
+    }
+
+
+    .card-desc{
+        position:relative !important;
+        display: block;
+        opacity: 1 !important;
+        visibility: visible !important;
+        width:100% !important;
+        border: none !important;
+        background-color: transparent !important;
+        color: var(--text-secondary) !important;
     }
 }

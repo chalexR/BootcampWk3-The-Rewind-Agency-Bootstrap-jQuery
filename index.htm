@@ -179,9 +179,9 @@
 
         </section>
     <!-- Right Column -->
-        <section class="col-md-4 p-0 pe-4 gy-5 pt-3 m-p-0">
+        <section class="col-md-4 p-0 pe-4 gy-5 pt-3 m-p-0 m-mt-0">
         <!-- Contact Form -->
-            <form class="col-md-12 rounded-4 p-2 my-5 mx-1 text-center btn-primary">
+            <form class="col-md-12 rounded-4 p-2 my-5 mx-1 text-center btn-primary m-mt-0">
                 <h3>Get in touch!</h3>
                 <label for="name" class="required">Name: </label><br />
                 <input id="name" name="name" type="text" class="rounded-4 focus-element" required><br />
@@ -352,7 +352,7 @@
             </p> 
         </div>
         <div class="col-md-1">
-            <uL class="m-0 p-0">
+            <uL class="m-0 p-0 ps-2">
                 <li>
                     <a href="./index.htm">Home</a>
                 </li>
@@ -395,39 +395,43 @@
         </div>
     </footer>
     <script>
-        // Loop through each .card-project element on the page
-        $('.card-project').each(function () {
-            const $card = $(this); // Cache the current .card-project element
-            const $desc = $card.find('.card-desc'); // Find the internal .card-desc within this card
+        // Check if device has a coarse pointer (e.g. mobile or tablet)
+        if (!window.matchMedia("(pointer: coarse)").matches) {
+            // Run only if NOT a touch-based device (i.e. desktop)
 
-            // Set up hover listeners on each .card-project
-            $card.hover(
-                // --- MOUSE ENTER FUNCTION ---
-                function () {
-                    // Bind a namespaced mousemove event to this card
-                    // This keeps the listener scoped to just this card
-                    $card.on('mousemove.followDesc', function (evt) {
-                        // Move the .card-desc to follow the cursor
-                        $desc.css({
-                            left: evt.clientX + window.scrollX -90,
-                            top: evt.clientY + window.scrollY - 600
+            // Loop through each .card-project element on the page
+            $('.card-project').each(function () {
+                const $card = $(this); // Cache the current .card-project element
+                const $desc = $card.find('.card-desc'); // Find the internal .card-desc within this card
+
+                // Set up hover listeners on each .card-project
+                $card.hover(
+                    // --- MOUSE ENTER FUNCTION ---
+                    function () {
+                        // Bind a namespaced mousemove event to this card
+                        // This keeps the listener scoped to just this card
+                        $card.on('mousemove.followDesc', function (evt) {
+                            // Move the .card-desc to follow the cursor
+                            $desc.css({
+                                left: evt.clientX + window.scrollX - 90,
+                                top: evt.clientY + window.scrollY - 600
+                            });
                         });
-                    });
-                },
-                // --- MOUSE LEAVE FUNCTION ---
-                function () {
-                    // Remove the specific mousemove event we added above
-                    // Using the namespace 'followDesc' ensures only our custom handler is removed
-                    $card.off('mousemove.followDesc');
+                    },
+                    // --- MOUSE LEAVE FUNCTION ---
+                    function () {
+                        // Remove the specific mousemove event we added above
+                        $card.off('mousemove.followDesc');
 
-                    // Reset the .card-desc position so it snaps back or hides
-                    $desc.css({
-                        left: 0,
-                        top: 0
-                    });
-                }
-            );
-        });
+                        // Reset the .card-desc position so it snaps back or hides
+                        $desc.css({
+                            left: 0,
+                            top: 0
+                        });
+                    }
+                );
+            });
+        }
     </script>
 </body>
 </html>
