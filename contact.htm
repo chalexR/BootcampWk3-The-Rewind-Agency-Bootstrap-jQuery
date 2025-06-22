@@ -13,6 +13,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+        var dateFormat = "mm/dd/yy",
+        from = $( "#from" )
+            .datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 3
+            })
+            .on( "change", function() {
+            to.datepicker( "option", "minDate", getDate( this ) );
+            }),
+        to = $( "#to" ).datepicker({
+            defaultDate: "+1w",
+            changeMonth: true,
+            numberOfMonths: 3
+        })
+        .on( "change", function() {
+            from.datepicker( "option", "maxDate", getDate( this ) );
+        });
+    
+        function getDate( element ) {
+        var date;
+        try {
+            date = $.datepicker.parseDate( dateFormat, element.value );
+        } catch( error ) {
+            date = null;
+        }
+    
+        return date;
+        }
+    } );
+    </script>
 <body>
 <!-- Navigation -->
     <nav class="position-sticky top-0 navbar navbar-expand-md bg-primary-subtle">
@@ -39,14 +72,77 @@
         </div>
     </nav>
 <!-- Main Section -->
-    <main class="row container-fluid m-0 ps-4 gx-0 m-p-0">
+    <main class="row container-fluid m-0 mt-3 ps-4 gx-0 m-p-0">
     <!-- Left Column -->
-        <section class="col-md-8 pe-5 ps-5 gy-5 gx-5 m-p-0">
+        <section class="col-md-6 pe-5 ps-5 gy-5 gx-5 m-0 m-p-0">
+            <!-- Contact Form -->
+            <form class="col-md-12 rounded-4 p-2 mb-3 mx-1 text-center btn-primary">
+                <h3>Get in touch!</h3>
+                <label for="name">Name: </label><br />
+                <input id="name" name="name" type="text" class="rounded-4 focus-element"><br />
+                <label for="email">Email: </label><br />
+                <input id="email" name="email" type="email" class="rounded-4 focus-element"><br />
+                <label for="phone">Phone: </label><br />
+                <input id="phone" name="phone" type="tel" class="rounded-4 focus-element"><br /><br />
+                <label for="date">Do you have a particular date in mind?</label><br />
 
+                <label for="from">From</label><br />
+                <input type="text" id="from" name="from" class="rounded-4 focus-element"><br />
+                <label for="to">to</label><br />
+                <input type="text" id="to" name="to" class="rounded-4 focus-element"><br /><br />
+
+                Which of our services would you like to enquire about?
+                <div class="w-75 mx-5 text-start">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="timeTour">
+                        <label class="form-check-label" for="timeTour">Book a Time Tour</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="customExperience">
+                        <label class="form-check-label" for="customExperience">Custom Experience Request</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="generalEnquiry">
+                        <label class="form-check-label" for="generalEnquiry">General Enquiry</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="reportAnom">
+                        <label class="form-check-label" for="reportAnom">Report a Temporal Anomaly</label>
+                    </div>
+                </div><br />
+
+                <label for="message">Message:</label><br />
+                <textarea id="message" name="message" class="w-75 rounded-4 p-2 focus-element"></textarea><br /><br />
+
+                <button class="btn btn-primary focus-element" type="submit">Send It</button>
+            </form>
         </section>
     <!-- Right Column -->
-        <section class="col-md-4 p-0 pe-4 gy-5 pt-3 m-p-0">
-
+        <section class="col-md-6 p-0 pe-4 gy-5 pt-3 my-5 m-p-0">
+            <div class="btn-primary p-3 m-0">
+                <ul class="contact-list focus-element m-0 p-3 rounded-4">
+                    <li>
+                        <a href="tel: +44 800 404 1212" class="phone">+44 800 404 1212</a> (Option 9 for Temporal Emergencies)<br />
+                        <i>Calls may be monitored by your future self for quality assurance.</i>
+                    </li>
+                    <li>
+                        <a href="mailto: support@therewind.agency" class="email">support@therewind.agency</a> <br />
+                        or<br />
+                        <a href="mailto: bookings@therewind.agency" class="email">bookings@therewind.agency</a>
+                        <br />
+                        <i>Please allow 2-4 business timelines for a reply.</i>
+                    </li>
+                    <li>
+                        <p class="address">
+                            The Clocktower,<br />
+                            3 Loop Street,<br />
+                            Parallel London,<br />
+                            PL1 4ME<br /><br />
+                            <i>(Just off the fourth dimension, above the vape shop that never closes)</i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </section>
     </main>
 
