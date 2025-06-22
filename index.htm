@@ -84,13 +84,13 @@
                 </div>         
             </div>
         <!-- Tours --> 
-            <div class="row bg-primary rounded-5 m-0 p-4 my-5 mx-1">
+            <div class="row btn-primary rounded-5 m-0 p-4 my-5 mx-1">
                 <h3>Our Most Recent Tours</h3>
             <!-- Cards -->
-                <div class="row d-flex p-0 m-0">
-                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
+                <div class="row d-flex gx-5 p-0 m-0">
+                    <div class="col-md-6 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/abraham-rave-king.jpg" alt="Abraham Lincoln on the Sesh" class="w-100 rounded-3">
-                        <div class="position-absolute card-desc rounded-5 p-3">
+                        <div class="position-absolute card-desc rounded-5 p-3 w-75">
                             <h2>Abe Raves: The Emancipation Vibration</h2>
                             <p>History books won’t tell you this — <strong></strong>but Abraham Lincoln would’ve absolutely lost it in a 90s illegal rave.</strong><br />
                             Tall hat? Already PLUR-coded.<br />
@@ -108,9 +108,9 @@
                             He came for unity. He left covered in UV body paint and love.</p>
                         </div>
                     </div>
-                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
+                    <div class="col-md-6 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/musk-whisperer.jpg" alt="Whispering in Elon's Ear" class="w-100 rounded-3">
-                        <div class="position-absolute card-desc rounded-5 p-3">
+                        <div class="position-absolute card-desc rounded-5 p-3 w-75">
                             <h2>The Whisper Heard Through Time</h2>
                             <p>Look, I only went back to whisper one thing in Elon’s ear:</p>
                             <blockquote>The big bill’s ugly, bro. Taper the edges. Make it fly.</blockquote>
@@ -118,9 +118,9 @@
                             <p>I didn’t mean to cause an interdimensional scandal — I was just there to change font choices on the Mars UI.</p>
                         </div>
                     </div>
-                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
+                    <div class="col-md-6 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/grassy-knole.jpg" alt="The Grassy Knole - JFK" class="w-100 rounded-3">
-                        <div class="position-absolute card-desc rounded-5 p-3">
+                        <div class="position-absolute card-desc rounded-5 p-3 w-75">
                             <h2>“Back… and to the left.”</h2>
                             <p>Ever wanted to see history unfold from an inconveniently grassy incline?</p>
                             <p>Join The Rewind Agency on our most requested tour:<br />
@@ -135,9 +135,9 @@
                             <p><i>Please refrain from altering the timeline. We’ve already lost 2 interns to The Zapruder Incident.</i></p>
                         </div>
                     </div>
-                    <div class="w-50 card-project rounded-4 p-4 m-p-1">
+                    <div class="col-md-6 card-project rounded-4 p-4 m-p-1">
                         <img src="./assets/image/guy-fawkes-baseline.jpg" alt="Getting Down with Guy Fawkes" class="w-100 rounded-3">
-                        <div class="position-absolute card-desc rounded-5 p-3">
+                        <div class="position-absolute card-desc rounded-5 p-3 w-75">
                             <h2>Guy Fawkes: Gunpowder, Basslines & Respect</h2>
                             <p>You know him for the plot — but Guy ‘The G’ Fawkes was all about dropping heat, not just planting it.</p>
                             <p>Step through time and join him the night before it all went boom:<br />
@@ -390,8 +390,8 @@
                     $card.on('mousemove.followDesc', function (evt) {
                         // Move the .card-desc to follow the cursor
                         $desc.css({
-                            left: evt.pageX,  // Horizontal cursor position
-                            top: evt.pageY    // Vertical cursor position
+                            left: evt.clientX + window.scrollX -90,
+                            top: evt.clientY + window.scrollY - 600
                         });
                     });
                 },
