@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link href="./assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Genos:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
@@ -68,7 +69,7 @@
                 <a href="./about.htm"><button class="btn btn-primary mx-1" type="button">About Us</button></a>
                 <a href="./contact.htm"><button class="btn btn-primary mx-1" type="button">Contact</button></a>
             </div>
-            <!-- Login Link in a real page I might make this a drop down menu with accout, profile, settings links once customer has logged in -->
+            <!-- Login Link - in a real page I might make this a drop down menu with account, profile, settings links once customer has logged in -->
             <div><a href="./login.htm">Login</a></div>
         </div>
     </nav>
@@ -182,10 +183,10 @@
         <!-- Contact Form -->
             <form class="col-md-12 rounded-4 p-2 my-5 mx-1 text-center btn-primary">
                 <h3>Get in touch!</h3>
-                <label for="name">Name: </label><br />
-                <input id="name" name="name" type="text" class="rounded-4 focus-element"><br />
-                <label for="email">Email: </label><br />
-                <input id="email" name="email" type="email" class="rounded-4 focus-element"><br />
+                <label for="name" class="required">Name: </label><br />
+                <input id="name" name="name" type="text" class="rounded-4 focus-element" required><br />
+                <label for="email" class="required">Email: </label><br />
+                <input id="email" name="email" type="email" class="rounded-4 focus-element" required><br />
                 <label for="phone">Phone: </label><br />
                 <input id="phone" name="phone" type="tel" class="rounded-4 focus-element"><br /><br />
                 <label for="date">Do you have a particular date in mind?</label><br />
@@ -222,17 +223,35 @@
             </form>
         <!-- Testimonial -->
             <div class="col-md-12 btn-primary rounded-4 p-3 my-5 mx-1">
-                <h4 class="text-center">Testimonial(s)</h4>
+                <h4 class="text-center">Testimonials</h4>
                 <div id="carouselExampleAutoplaying" class="carousel slide text-center" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            Testimonial 1
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <p class="fst-italic">I booked a quiet evening at the signing of the Magna Carta and somehow ended up topless at a jungle set in Ancient Sumeria. 10/10. Didn’t get my sandals back but gained spiritual clarity.</p>
+                            <p><strong>— Lorraine, Timeline 6-C, </strong>part-time history teacher, full-time raver</p>
                         </div>
                         <div class="carousel-item">
-                            Testimonial 2
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <p class="fst-italic">The Rewind Agency let me relive my 20s at a 1997 illegal warehouse rave… in front of my 18th-century ancestors. Grandad called me a ‘witch of bass’ and started skanking. Best family reunion I’ve ever had.</p>
+                            <p><strong>— Tom, Earth-Prime, </strong>emotionally recovered from it (mostly)</p>
                         </div>
                         <div class="carousel-item">
-                            Testimonial 3
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <p class="fst-italic">Turned up for a hen do. Left having invented disco in three separate timelines. I’m now worshipped as a goddess in at least one dimension. Thanks Charles x</p>
+                            <p><strong>— Jules, Multiverse ID pending, </strong>definitely not coming back to this reality</p>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
