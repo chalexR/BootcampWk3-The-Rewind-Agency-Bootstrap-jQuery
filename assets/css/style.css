@@ -45,6 +45,7 @@ h1,h2,h3,h4,h5{
     font-family: var(--font-header);
     color: var(--text-primary);
 }
+
 footer{
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
@@ -62,13 +63,35 @@ footer{
 
 .w-15{ width:15% !important; }
 
+.ul-ticklist{
+    list-style-type:none;
+    padding:0;
+    text-align:left;
+}
+.ul-ticklist li::before{
+    content:"✅ ";
+}
+
+.accordion-button{
+    top: -4px !important;
+}
+.accordion-button:not(.collapsed){
+    background-color: var(--accent-primary);
+}
+.accordion-button:focus{
+    box-shadow: none;
+}
+
 /* apply to any content you want to have a pop up effect on. There is a seperate class for buttons which overwrites the bootstrap*/
 .focus-element{
     background-color:var(--bg-main);
     box-shadow: var(--int-shadow-card);
     color:var(--text-secondary);
     outline: none;
-    border: 1px inset var(--shadow-light);
+    border-bottom: 1px inset var(--shadow-light) !important;
+    border-right: 1px inset var(--shadow-light) !important;
+    border-top: 1px inset var(--box-border) !important;
+    border-left: 1px inset var(--box-border) !important;
     transition: ease .4s;
     z-index:2;
 }
@@ -80,7 +103,10 @@ footer{
 }
 .focus-element:active{
     background-color:var(--accent-four) !important;
-    border:1px solid var(--accent-four) !important;
+    border-bottom: 1px inset var(--shadow-light) !important;
+    border-right: 1px inset var(--shadow-light) !important;
+    border-top: 1px inset var(--box-border) !important;
+    border-left: 1px inset var(--box-border) !important;
     color: var(--accent-primary) !important;
     transition: ease 0s;
     transform: translateY(4px);
